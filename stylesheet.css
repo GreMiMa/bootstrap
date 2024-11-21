@@ -251,9 +251,34 @@ button {
     justify-content: center;
 }
 
+.ratio-16x9 iframe {
+    max-width: 100%;
+    height: auto;
+}
 
+/* Pienille näytöille, kuten puhelimille */
 @media (max-width: 576px) {
+    .ratio-16x9 {
+        max-width: 90%;
+        /* Rajaa videon leveyttä pienemmillä näytöillä */
+        margin: 0 auto;
+        /* Keskittää videon */
+    }
+
     .ratio-16x9 iframe {
-        height: auto;
+        width: 100%;
+        /* Skaalaa iframe:n täyttämään koko kontti */
+        height: 200px;
+        /* Määritä korkeus pienemmälle näytölle (esim. 200px) */
+    }
+}
+
+/* Keskikokoisille näytöille (kuten tableteille) */
+@media (max-width: 768px) {
+    .ratio-16x9 iframe {
+        width: 100%;
+        /* Skaalaa iframe:n täyttämään koko kontti */
+        height: 315px;
+        /* Esim. 16:9 kuvasuhteelle hyvä korkeus */
     }
 }
