@@ -250,3 +250,10 @@ button {
     display: flex;
     justify-content: center;
 }
+
+
+@media (max-width: 576px) {
+    .ratio-16x9 iframe {
+        height: auto;
+    }
+}
