@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Restaurant Wine&Whispers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstrapin CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!--bootstrap, bundle-versiossa on mukana myös popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!--linkki js tiedostoon-->
+  <script src="lomake.js"></script>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50"></body>
+<main class="container-fluid">
+
+  <!--navipalkki-->
+  <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#demo"> <img src="dish.png" alt="logo" style="width: 40px;"
+          class="rounded-pill">Wine&Whispers</a>
+      <!--hampurilaisvalikko-->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#restaurant">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#favourites">Favourites</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#accordion" role="button" data-bs-toggle="dropdown">Menu</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#drink">Drinks</a></li>
+              <li><a class="dropdown-item" href="#starters">Starters</a></li>
+              <li><a class="dropdown-item" href="#main">Main courses</a></li>
+              <li><a class="dropdown-item" href="#dessert">Desserts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reservation">Table reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- kuvakaruselli -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- ohjauspainikkeet karusellin alareunassa -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="risotto_and_soup_.jpeg" alt="risotto and soup" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Delicious starters</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="salad2_.jpeg" alt="salad" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Fresh salads</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="pizzzza.jpeg" alt="pizza" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Crispy pizzas</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="cake_.jpeg" alt="strawberry cake" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Sweet cakes</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- grid, about the restaurant and opening hours -->
+  <div class="container-fluid" id="restaurant">
+    <div class="row">
+      <div class="col-sm-4"><img src="restaurant.jpeg" alt="restaurant from outside"></div>
+      <div id="welcome" class="col-sm-4">
+        <br>
+        <h1>Restaurant Wine&Whispers</h1>
+        <br>
+        <p>At Wine & Whispers, every glass tells a story,</p>
+        <p>and every dish whispers flavors of passion.</p>
+        <p>Rooted in tradition and inspired by the art of gathering, we create</p>
+        <p>unforgettable moments in a cozy, elegant ambiance.</p>
+        <br>
+        <br>
+        <h2>Opening hours </h2>
+        <br>
+        <p>M-F 10am - 12am <br>
+          S 12pm - 2am <br>
+          S 12pm - 10pm</p>
+      </div>
+      <div class="col-sm-4"><img src="_restaurant.jpeg" alt="dinner table"></div>
+    </div>
+  </div>
+
+  <!-- card -->
+  <div id="favourites">
+    <div>
+      <h2> Customers favourites</h2>
+    </div>
+
+    <div>
+      <div class="card-group">
+        <div class="card">
+          <img src="starter.jpeg" class="card-img-top" alt="Starter">
+          <div class="card-body">
+            <h5 class="card-title">Starters</h5>
+            <p class="card-text">Fresh ingredients and expertly crafted flavors awaken your appetite and take you on a
+              taste journey.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="food2_.jpeg" class="card-img-top" alt="Main">
+          <div class="card-body">
+            <h5 class="card-title">Roast</h5>
+            <p class="card-text">Savor the rich flavors of our perfectly roasted meats, slow-cooked to tender perfection
+              and served with a side of warmth and tradition.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="icecream_apple_.jpeg" class="card-img-top" alt="ice cream with apple">
+          <div class="card-body">
+            <h5 class="card-title">Baked apple with ice cream</h5>
+            <p class="card-text">Warm, cinnamon-spiced baked apple paired with creamy vanilla ice cream – a comforting
+              dessert that’s pure bliss in every bite.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="burger.jpeg" class="card-img-top" alt="Main">
+          <div class="card-body">
+            <h5 class="card-title">Burger</h5>
+            <p class="card-text">Juicy, flavorful, and stacked to perfection – our burger is a mouthwatering masterpiece
+              that satisfies every craving.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- accordion, haitarimalli-->
+  <div id="accordion">
+    <div>
+      <h2>Menu</h2>
+    </div>
+    <div class="card" id="drink">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+          Drinks
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-4"><img src="drink.jpg" alt="drink"></div>
+            <div id="drinkmenu" class="col-sm-8">
+              <br>
+              <p>Whispering Martini – Smooth vodka, elderflower liqueur, and a splash of citrus.</p>
+              <p>Velvet Breeze – Rum, cranberry, lime, and a hint of mint for a refreshing twist.</p>
+              <p>Citrus Crush – Tequila, orange liqueur, fresh lime, and agave syrup.</p>
+              <p>Rosemary Fizz – Gin, tonic, fresh rosemary, and a dash of lemon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="starters">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+            Starters
+          </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-4"><img src="food3_.jpeg" alt="food"></div>
+              <div id="startermenu" class="col-sm-4">
+                <br>
+                <p>Goat Cheese Salad - Fresh vegetables, roasted nuts, honey, and goat cheese.</p>
+                <p>Buffalo Mozzarella and Tomato - Fresh buffalo mozzarella, sweet tomatoes, basil, and balsamic
+                  vinegar.</p>
+              </div>
+              <div class="col-sm-4"><img src="buffalocheese.jpeg" alt="food"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="main">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+            Main courses
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="row">
+              <div id="mainmenu" class="col-sm-6">
+                <p>Sushi Set - A selection of fresh nigiri, maki rolls, and sashimi.</p>
+                <p>Pasta in Truffle Cream Sauce - Fresh pasta, creamy truffle sauce, and Parmesan.</p>
+                <p>American Burger - Juicy beef patty, cheddar cheese, fresh vegetables, and spicy sauce.</p>
+                <p>Grilled Steak and Vegetables - Thick beef steak, roasted vegetables, and garlic butter.</p>
+              </div>
+              <div class="col-sm-3"><img src="pasta_.jpeg" alt="pasta"></div>
+              <div class="col-sm-3"><img src="sushi_.jpeg" alt="sushi"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="dessert">
+        <div class="card-header">
+          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+            Desserts
+          </a>
+        </div>
+        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3"><img src="dessert_.jpeg" alt="dessert"></div>
+              <div class="col-sm-3"> <img src="dessert2_.jpeg" alt="dessert"></div>
+              <div id="dessertmenu" class="col-sm-6">
+                <br>
+                <p>Three-Dessert Platter - A small serving of chocolate cake, vanilla cream, and berry pie.</p>
+                <p>Stuffed Croissants - Buttery croissants filled with chocolate, vanilla cream, or jam.</p>
+                <p>Baked Apple with Ice Cream - Roasted baked apple with cinnamon and sugar, served with vanilla ice
+                  cream.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="linkit" class="container">
+      <!-- video tabs -->
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#video1">Video 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#video2">Video 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#video3">Video 3</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active" id="video1">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/BHcyuzXRqLs?si=IS0Z7SET8JfTRHKZ" title="YouTube video"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="video2">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/tA65w0C74Yg?si=BGf5lfL1YWjyaTc5" title="YouTube video"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="video3">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/klfxQuXT66s?si=pY6N0RU3s7fLgaHY" title="YouTube video"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- lomake, table reservation -->
+    <div id="reservation">
+      <div>
+        <h2>Reservation</h2>
+      </div>
+      <form onsubmit="return false" id="lomake">
+        <div class="left-side">
+          <label for="nimi">Name: </label>
+          <input type="text" id="nimi" placeholder="Write your name" required>
+          <br>
+          <label for="puhnro">Phone number: </label>
+          <input type="tel" id="puhnro" placeholder="Your phone number">
+          <br>
+          <label for="sposti">Email: </label>
+          <input type="email" id="sposti" placeholder="Enter your email" required>
+          <br>
+          <br>
+          <label for="palaute">Wishes for the reservation</label>
+          <br>
+          <textarea id="palaute" rows="5" cols="50"></textarea>
+          <br>
+          <br>
+        </div>
+
+        <div class="right-side">
+          <!-- radiobutton, vain yksi valinta-->
+          <label>Have you visited our restaurant before?</label>
+          <br>
+          <input type="radio" id="kyllä" name="vieraillut" value="kyllä">
+          <label for="kyllä">Yes</label>
+          <br>
+          <input type="radio" id="en" name="vieraillut" value="en">
+          <label for="en">No</label>
+          <br>
+          <input type="radio" id="haluaisin" name="vieraillut" value="haluaisin">
+          <label for="haluaisin">No, but I have heard about</label>
+          <br>
+          <input type="radio" id="en mielellään" name="vieraillut" value="en mielellään">
+          <label for="en mielellään">I have never heard about you before</label>
+          <br>
+          <br>
+          <!--checkbox, useampi valinta kerrallaan-->
+          <label>What dietary restrictions / allergies does your group have?</label>
+          <br>
+          <input type="checkbox" id="laktoositon" name="ruokarajoitteita" value="laktoositon">
+          <label for="laktoositon">Laktose-free</label>
+          <br>
+          <input type="checkbox" id="gluteeniton" name="ruokarajoitteita" value="gluteeniton">
+          <label for="gluteeniton">Gluten-free</label>
+          <br>
+          <input type="checkbox" id="vegaani" name="ruokarajoitteita" value="vegaani">
+          <label for="vegaani">Vegan</label>
+          <br>
+          <input type="checkbox" id="maidoton" name="ruokarajoitteita" value="maidoton">
+          <label for="maidoton">Dairy-free</label>
+          <br>
+          <br>
+
+          <!-- alasvetovalikko-->
+          <label>Did you find everything you were looking for on our website?</label>
+          <br>
+          <select name="loytyiko" id="loytyiko">
+            <option value="Kyllä">Yes</option>
+            <option value="En kaikkea">Not everything</option>
+            <option value="En ollenkaan">Not at all</option>
+          </select>
+          <br>
+          <br>
+        </div>
+
+        <!-- button -->
+        <div class="button-container">
+          <input type="button" value="Send" onclick="varaus()">
+          <input type="reset" value="Clear all">
+        </div>
+
+      </form>
+
+      <!-- elementti, johon vastaus tulostuu-->
+      <div id="vastaus"></div>
+    </div>
+
+
+    <!-- responsive table -->
+    <div class="container mt-3" id="contact">
+      <h2>Contact us</h2>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Staff</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Phone number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Restaurant Manager</td>
+              <td>Ethan</td>
+              <td>Caldwell</td>
+              <td>ethan.c@wine&whispers.com</td>
+              <td>0456789029</td>
+            </tr>
+            <tr>
+              <td>Head Chef</td>
+              <td>Dominic</td>
+              <td>Faulkner</td>
+              <td>dominic.f@wine&whispers.com</td>
+              <td>0456789030</td>
+            </tr>
+            <tr>
+              <td>Waitress / Shift Supervisor</td>
+              <td>Lila</td>
+              <td>Harper</td>
+              <td>lila.h@wine&whispers.com</td>
+              <td>0456789031</td>
+            </tr>
+            <tr>
+              <td>Bartender</td>
+              <td>Oliver</td>
+              <td>Hayes</td>
+              <td>oliver.h@wine&whispers.com</td>
+              <td>0456789032</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+</main>
+
+
+
+
+</body>
+
+</html>
